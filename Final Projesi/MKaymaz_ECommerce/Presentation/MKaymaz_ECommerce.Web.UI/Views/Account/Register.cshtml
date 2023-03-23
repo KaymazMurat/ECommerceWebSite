@@ -1,0 +1,92 @@
+﻿@model RegisterViewModel
+@{
+    Layout = null;
+}
+
+
+<!doctype html>
+<html class="no-js " lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
+
+    <title>::Member :: Create Account</title>
+    <!-- Favicon-->
+    <link rel="icon" href="~/assets/images/favicon.png" type="image/x-icon">
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/style.min.css">
+</head>
+
+<body class="theme-blush">
+    <div class="authentication">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-12">
+                    <form asp-controller="Account" asp-action="Register" class="card auth_form">
+                        <div class="header">
+                            <img class="logo" src="~/assets/images/logo.png" alt="">
+                            <a asp-controller="Home" asp-action="Index">Anasayfa </a>
+                            <h5>Üye Ol</h5>
+                        </div>
+                        <div class="body">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                            <div class="input-group mb-3">
+                                <input asp-for="FirstName" type="text" class="form-control" placeholder="İsim">
+                            </div>
+                            <br />
+                            <span asp-validation-for="SurName" class="text-danger"></span>
+                            <div class="input-group mb-3">
+                                <input asp-for="SurName" type="text" class="form-control" placeholder="Soyisim">
+                            </div>
+                            <br />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                            <div class="input-group mb-3">
+                                <input asp-for="Email" type="text" class="form-control" placeholder="Email">
+                            </div>
+                            <br />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                            <div class="input-group mb-3">
+                                <input asp-for="Password" type="password" class="form-control" placeholder="Şifre">
+                            </div>
+                            <br />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                            <div class="input-group mb-3">
+                                <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="Şifre">
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-info waves-effect m-t-20">Üye Ol</button>
+                            </div>
+
+                        </div>
+                    </form>
+                    <div class="copyright text-center">
+                        &copy;
+                        <script>document.write(new Date().getFullYear())</script>,
+                        <span><a href="#">Murat Kaymaz</a></span>
+                    </div>
+                   
+                </div>
+                <div class="col-lg-8 col-sm-12">
+                    <div class="card">
+                        <img src="~/assets/images/lookbook-5.jpg" alt="Sign In" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Jquery Core Js -->
+    <script src="~/assets/bundles/libscripts.bundle.js"></script>
+    <script src="~/assets/bundles/vendorscripts.bundle.js"></script> <!-- Lib Scripts Plugin Js -->
+</body>
+
+
+</html>

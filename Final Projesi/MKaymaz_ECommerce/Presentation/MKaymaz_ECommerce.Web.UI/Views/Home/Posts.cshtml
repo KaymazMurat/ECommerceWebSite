@@ -1,0 +1,49 @@
+﻿@model List<ProductViewModel>
+@{
+    ViewData["Title"] = "Posts";
+}
+
+@foreach (ProductViewModel item in Model)
+{
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 item">
+        <!-- start product image -->
+        <div class="product-image">
+            <!-- start product image -->
+            <a asp-controller="Home" asp-action="Post" asp-route-id="@item.Id">
+                <!-- image -->
+                <img class="primary blur-up ls-is-cached lazyloaded" data-src="@item.Barcode" src="@item.Barcode" alt="image" title="product">
+                <!-- End image -->
+
+            </a>
+            <!-- end product image -->
+            <!-- Start product button -->
+            <form class="variants add" asp-controller="Cart" asp-action="Post" method="post">
+                <input asp-for="@item.Id" class="form-control" type="text" hidden />
+                <button class="btn btn-addto-cart" type="submit" title="">Add Cart</button>
+            </form>
+
+            <!-- end product button -->
+        </div>
+        <!-- end product image -->
+        <!--start product details -->
+        <div class="product-details text-center">
+            <!-- product name -->
+            <div class="product-name">
+                <a href="@item.FullName">@item.FullName</a>
+            </div>
+            <!-- End product name -->
+            <!-- product price -->
+            <div class="product-price">
+                <h3>@item.Price1</h3>
+            </div>
+            <!-- End product price -->
+            <!-- Variant -->
+            <!-- End Variant -->
+        </div>
+        <!-- End product details -->
+
+    </div>
+
+}
+
+

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MKaymaz_ECommerce.Web.UI.props" />
+</Project>

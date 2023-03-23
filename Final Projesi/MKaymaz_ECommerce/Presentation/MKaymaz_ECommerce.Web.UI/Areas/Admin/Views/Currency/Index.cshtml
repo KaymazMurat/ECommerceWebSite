@@ -1,0 +1,82 @@
+﻿@model List<CurrencyViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<!-- Main Content -->
+<div class="body_scroll">
+    <div class="block-header">
+        <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <h2>list</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item">Currencies</li>
+                    <li class="breadcrumb-item active">Currency list</li>
+                </ul>
+                <button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12">
+                <button  class="btn btn-primary btn-icon float-right right_icon_toggle_btn" type="button"><i class="zmdi zmdi-arrow-right"></i></button>
+                 <a asp-controller="Currency" asp-action="Insert" class="btn btn-success btn-icon float-right"><i class="zmdi zmdi-plus"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="card project_list">
+                    <div class="table-responsive">
+                        <table class="table table-hover c_table">
+                            <thead>
+                                <tr>
+                                    <th>Label</th>
+                                    <th>Selling Price</th>
+                                    <th>Buyying Price</th>
+                                    <th>Abbr</th>
+                                    <th>Is Primary</th>
+                                    <th>Status</th>
+                                    <th><span class="badge badge-info">Activate Button</span></th>
+                                    <th><span class="badge badge-warning">Update Button</span></th>
+                                    <th><span class="badge badge-danger">Delete Button</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (CurrencyViewModel item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.Label</td>
+                                        <td>@item.SellingPrice</td>
+                                        <td>@item.BuyingPrice</td>
+                                        <td>@item.Abbr</td>
+                                        <td>@item.IsPrimary</td>
+                                        <td><partial name="PartialViews/_StatusPartial" model="item.Status" /></td>
+                                        <td>
+                                            <a asp-controller="Currency" asp-action="Activate" asp-route-id="@item.Id" class="badge badge-info"><span>Activate</span></a>
+                                        </td>
+                                         <td>
+                                            <a asp-controller="Currency" asp-action="Update" asp-route-id="@item.Id" class="badge badge-warning"><span>Update</span></a>
+                                        </td>
+                                        <td>
+                                            <a asp-controller="Currency" asp-action="Delete" asp-route-id="@item.Id" class="badge badge-danger"><span>Delete</span></a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="pagination pagination-primary mt-4">
+                        <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);">4</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:void(0);">5</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

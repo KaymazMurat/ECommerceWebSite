@@ -1,0 +1,67 @@
+﻿@model CreateBrandViewModel
+
+@{
+    ViewData["Title"] = "Insert";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="body_scroll">
+    <div class="block-header">
+        <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <h2>Add Brand</h2>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-controller="Brand" asp-action="Index" asp-area"">Brand</a></li>
+                    <li class="breadcrumb-item active">New Brand</li>
+                </ul>
+                <button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12">
+                <button class="btn btn-primary btn-icon float-right right_icon_toggle_btn" type="button"><i class="zmdi zmdi-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <form asp-controller="Brand" asp-action="Insert" method="post" enctype="multipart/form-data">
+                    <div class="card">
+                        <div class="body">
+                            <div class="form-group">
+                                <input asp-for="Name" type="text" class="form-control" placeholder="Brand Name" />
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <input asp-for="Slug" type="text" class="form-control" placeholder="Slug" />
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <input asp-for="SortOrder" type="text" class="form-control" placeholder="Sort Order" />
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <input asp-for="MetaDescription" type="text" class="form-control" placeholder="Description" />
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <input class="form-control" type="file" name="files">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="body">
+                            <button type="submit" class="btn btn-info waves-effect m-t-20">SAVE</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+     @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @TempData["Message"]
+        </div>
+    }
+</div>

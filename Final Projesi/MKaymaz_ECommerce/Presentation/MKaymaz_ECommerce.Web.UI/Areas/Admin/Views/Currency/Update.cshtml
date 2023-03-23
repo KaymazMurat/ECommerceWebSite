@@ -1,0 +1,64 @@
+﻿@model UpdateCurrencyViewModel
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="body_scroll">
+    <div class="block-header">
+        <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <h2>Update Currency</h2>
+                <ul class="breadcrumb">
+                   <li class="breadcrumb-item"><a asp-controller="Currency" asp-action="Index" asp-area"">Currency</a></li>
+                </ul>
+                <button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <form asp-controller="Currency" asp-action="Update" method="post" enctype="multipart/form-data">
+                     <input type="hidden" asp-for="Id" />
+                    <div class="card">
+                        <div class="body">
+                            <div class="form-group">
+                                <input asp-for="Label" type="text" class="form-control" placeholder="Label" />
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <input asp-for="BuyingPrice" type="text" class="form-control" placeholder="Buying Price" />
+                            </div>
+                            <br />
+                             <div class="form-group">
+                                <input asp-for="SellingPrice" type="text" class="form-control" placeholder="Selling Price" />
+                            </div>
+                            <br />
+                             <div class="form-group">
+                                <input asp-for="Abbr" type="text" class="form-control" placeholder="Abbr" />
+                            </div>
+                              <br />
+                             <div class="form-group">
+                                <input asp-for="IsPrimary" type="text" class="form-control" placeholder="Is Primary" />
+                            </div>
+                            <br />
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="body">
+                            <button type="submit" class="btn btn-info waves-effect m-t-20">UPDATE</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @TempData["Message"]
+        </div>
+    }
+</div>
+

@@ -1,0 +1,297 @@
+﻿
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<!-- belle/shop-grid-5.html   11 Nov 2019 12:39:07 GMT -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Women &ndash; Belle Multipurpose Bootstrap 4 Template</title>
+    <meta name="description" content="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="~/assets/images/favicon.png" />
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="~/assets/css/plugins.css">
+    <!-- Bootstap CSS -->
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="~/assets/css/responsive.css">
+</head>
+<body class="template-collection belle">
+    <div class="pageWrapper">
+        <!--Search Form Drawer-->
+        <div class="search">
+            <div class="search__form">
+                <form class="search-bar__form" action="#">
+                    <button class="go-btn search__button" type="submit"><i class="icon anm anm-search-l"></i></button>
+                    <input class="search__input" type="search" name="q" value="" placeholder="Search entire store..." aria-label="Search" autocomplete="off">
+                </form>
+                <button type="button" class="search-trigger close-btn"><i class="icon anm anm-times-l"></i></button>
+            </div>
+        </div>
+        <!--End Search Form Drawer-->
+        <!--Top Header-->
+        <div class="top-header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-10 col-sm-8 col-md-5 col-lg-4">
+                        <p class="phone-no"><i class="anm anm-phone-s"></i> +542 272 48 16</p>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 d-none d-lg-none d-md-block d-lg-block">
+                        <div class="text-center"><p class="top-header_middle-text"> MKaymazECommerce</p></div>
+                    </div>
+                    <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
+                        <span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
+                        <ul class="customer-links list-inline">
+                            <li><a asp-controller="Account" asp-action="Login">Login</a></li>
+                            <li><a asp-controller="Account" asp-action="Register">Create Account</a></li>
+                            <li><a asp-controller="Account" asp-action="Logout" asp-area=""><i class="zmdi zmdi-account"></i>Çıkış Yap</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Top Header-->
+        <!--Header-->
+        <div class="header-wrap animated d-flex">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <!--Desktop Logo-->
+                    <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
+                        <a asp-controller="Home" asp-action="Index">
+                            <img src="~/assets/images/logo/brandlogo1.png" alt="Belle Multipurpose Html Template" title="Belle Multipurpose Html Template" />
+                        </a>
+                    </div>
+                    <!--End Desktop Logo-->
+                    <div class="col-2 col-sm-3 col-md-3 col-lg-8">
+                        <div class="d-block d-lg-none">
+                            <button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
+                                <i class="icon anm anm-times-l"></i>
+                                <i class="anm anm-bars-r"></i>
+                            </button>
+                        </div>
+                        <!--Desktop Menu-->
+                        <nav class="grid__item" id="AccessibleNav">
+                            <!-- for mobile -->
+                            <ul id="siteNav" class="site-nav medium center hidearrow">
+                                <li class="lvl1 parent dropdown">
+                                    <a asp-controller="Home" asp-action="Index">Home <i class="anm anm-angle-down-l"></i></a>
+
+                                </li>
+                                <li class="lvl1 parent dropdown">
+                                    <a>Pages <i class="anm anm-angle-down-l"></i></a>
+                                    <ul class="dropdown">
+                                        <li>
+                                            <a asp-controller="Cart" asp-action="Index" class="site-nav">Cart Page <i class="anm anm-angle-right-l"></i></a>
+                                        </li>
+                                        <li><a asp-controller="Checkout" asp-action="Index" class="site-nav">Checkout</a></li>
+                                        <li><a asp-controller="AboutUs" asp-action="Index" class="site-nav">About Us <span class="lbl nm_label1">New</span> </a></li>
+                                        <li><a asp-controller="ConrtactUs" asp-action="Index" class="site-nav">Contact Us</a></li>
+                                        <li><a asp-controller="AboutUs" asp-action="Faqs" class="site-nav">FAQs</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="lvl1"><a asp-controller="Checkout" asp-action="Index"><b>Buy Now!</b> <i class="anm anm-angle-down-l"></i></a></li>
+                            </ul>
+                        </nav>
+                        <!--End Desktop Menu-->
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="~/assets/images/logo.svg" alt="Belle Multipurpose Html Template" title="Belle Multipurpose Html Template" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-4 col-sm-3 col-md-3 col-lg-2">
+                        <div class="site-cart">
+                            <a href="#;" class="site-header__cart" title="Cart">
+                                <i class="icon anm anm-bag-l"></i>
+                                <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count">>></span>
+                            </a>
+                            <!--Minicart Popup-->
+                            <div id="header-cart" class="block block-cart">
+                                <div class="total">
+                                    <div class="buttonSet text-center">
+                                        <a asp-controller="Cart" asp-action="Index" class="btn btn-secondary btn--small">View Cart</a>
+                                        <a asp-controller="Checkout" asp-action="Index" class="btn btn-secondary btn--small">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End Minicart Popup-->
+                        </div>
+                        <div class="site-header__search">
+                            <button type="button" class="search-trigger"><i class="icon anm anm-search-l"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Header-->
+        <!--Body Content-->
+        <div id="page-content">
+            <hr />
+            <div class="container">
+
+                <div class="row">
+                    <!--Sidebar-->
+                    @*<div class="col-12 col-sm-12 col-md-3 col-lg-3 sidebar filterbar">
+                        <div class="closeFilter d-block d-md-none d-lg-none"><i class="icon icon anm anm-times-l"></i></div>
+                        <div class="sidebar_tags">
+                            <!--Categories-->
+                            <div class="sidebar_widget categories filter-widget">
+                                <div class="widget-content">
+                                    <ul class="sidebar_categories">
+                                        <vc:category></vc:category>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--Categories-->
+                            <!--Brand-->
+                            <div class="sidebar_widget filterBox filter-widget">
+                                <vc:brand></vc:brand>
+                            </div>
+                            <!--End Brand-->
+                        </div>
+                    </div>*@
+                    <!--End Sidebar-->
+                    <!--Main Content-->
+                    @RenderBody()
+                    <!--End Main Content-->
+                </div>
+            </div>
+
+        </div>
+        <!--End Body Content-->
+        <!--Footer-->
+        <footer id="footer">
+            <div class="newsletter-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-7 w-100 d-flex justify-content-start align-items-center">
+                            <div class="display-table">
+                                <div class="display-table-cell footer-newsletter">
+                                    <div class="section-header text-center">
+                                        <label class="h2"><span>sign up for </span>newsletter</label>
+                                    </div>
+                                    <form action="#" method="post">
+                                        <div class="input-group">
+                                            <input type="email" class="input-group__field newsletter__input" name="EMAIL" value="" placeholder="Email address" required="">
+                                            <span class="input-group__btn">
+                                                <button type="submit" class="btn newsletter__submit" name="commit" id="Subscribe"><span class="newsletter__submit-text--large">Subscribe</span></button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer">
+                <div class="container">
+                    <!--Footer Links-->
+                    <div class="footer-top">
+                    </div>
+                    <!--End Footer Links-->
+                    <hr>
+                    <div class="footer-bottom">
+                        <div class="row">
+                            <!--Footer Copyright-->
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 order-1 order-md-0 order-lg-0 order-sm-1 copyright text-sm-center text-md-left text-lg-left"><span></span> <a href="templateshub.net">Templates Hub</a></div>
+                            <!--End Footer Copyright-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--End Footer-->
+        <!--Scoll Top-->
+        <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
+        <!--End Scoll Top-->
+        <!--Quick View popup-->
+        <div class="modal fade quick-view-popup" id="content_quickview">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div id="ProductSection-product-template" class="product-template__container prstyle1">
+                            <div class="product-single">
+                                <!-- Start model close -->
+                                <a href="javascript:void()" data-dismiss="modal" class="model-close-btn pull-right" title="close"><span class="icon icon anm anm-times-l"></span></a>
+                                <!-- End model close -->
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                        <div class="product-details-img">
+                                            <div class="pl-20">
+                                                <img src="#" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                                        <div class="product-single__meta">
+                                            <h2 class="product-single__title">Product Quick View Popup</h2>
+                                            <div class="prInfoRow">
+                                                <div class="product-stock"> <span class="instock ">In Stock</span> <span class="outstock hide">Unavailable</span> </div>
+                                                <div class="product-sku">SKU: <span class="variant-sku">19115-rdxs</span></div>
+                                            </div>
+                                            <p class="product-single__price product-single__price-product-template">
+                                                <span class="visually-hidden">Regular price</span>
+                                                <s id="ComparePrice-product-template"><span class="money">#</span></s>
+                                                <span class="product-price__price product-price__price-product-template product-price__sale product-price__sale--single">
+                                                    <span id="ProductPrice-product-template"><span class="money">#</span></span>
+                                                </span>
+                                            </p>
+                                            <div class="product-single__description rte">
+                                            </div>
+
+                                            <form method="post" action="http://annimexweb.com/cart/add" id="product_form_10508262282" accept-charset="UTF-8" class="product-form product-form-product-template hidedropdown" enctype="multipart/form-data">
+
+                                                <!-- Product Action -->
+                                                <div class="product-action clearfix">
+                                                    <div class="product-form__item--quantity">
+                                                        <div class="wrapQtyBtn">
+                                                            <div class="qtyField">
+                                                                <a class="qtyBtn minus" href="javascript:void(0);"><i class="fa anm anm-minus-r" aria-hidden="true"></i></a>
+                                                                <input type="text" id="Quantity" name="quantity" value="1" class="product-form__input qty">
+                                                                <a class="qtyBtn plus" href="javascript:void(0);"><i class="fa anm anm-plus-r" aria-hidden="true"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-form__item--submit">
+                                                        <button type="button" name="add" class="btn product-form__cart-submit">
+                                                            <span>Add to cart</span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <!-- End Product Action -->
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End-product-single-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Quick View popup-->
+        <!-- Including Jquery -->
+        <script src="~/assets/js/vendor/jquery-3.3.1.min.js"></script>
+        <script src="~/assets/js/vendor/jquery.cookie.js"></script>
+        <script src="~/assets/js/vendor/modernizr-3.6.0.min.js"></script>
+        <script src="~/assets/js/vendor/wow.min.js"></script>
+        <!-- Including Javascript -->
+        <script src="~/assets/js/bootstrap.min.js"></script>
+        <script src="~/assets/js/plugins.js"></script>
+        <script src="~/assets/js/popper.min.js"></script>
+        <script src="~/assets/js/lazysizes.js"></script>
+        <script src="~/assets/js/main.js"></script>
+    </div>
+</body>
+
+<!-- belle/shop-grid-5.html   11 Nov 2019 12:39:07 GMT -->
+</html>
